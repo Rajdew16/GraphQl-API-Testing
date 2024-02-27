@@ -1,0 +1,136 @@
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "mutation($locationId:Int!,$editLocationName:String){\n  createLocation(location:{name:\"Pochinki\" type:\"CenterZone\" dimension:\"8x8\"}){\n    id\n  }\n  editLocation(locationId:$locationId, newLocationData:{name:$editLocationName} ){\n    status\n  }\n  createEpisode(episode:{name:\"Pubg\" air_date:\"10/10/2023\" episode:\"Team got AWM\"}){\n    id\n  }\n  createCharacter(character:{name:\"Asta\" type:\"Strong\" status:\"alive\" species:\"white boy\" gender:\"male\" image:\"na\" originId:$locationId locationId:$locationId}){\n    id\n  }\n}",
+    "variables": {
+        "locationId": 7095,
+        "editLocationName": "Yasnaya Poliyana"
+    }
+}
+HTTP/1.1 200 OK
+Date: Tue, 27 Feb 2024 07:27:34 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 125
+ETag: W/"7d-l/v9p+iaUNl13H6ZqgxXZwZindY"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "createLocation": {
+            "id": 7141
+        },
+        "editLocation": {
+            "status": 0
+        },
+        "createEpisode": {
+            "id": 5135
+        },
+        "createCharacter": {
+            "id": 6272
+        }
+    }
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/gq/graphql
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "query": "query($locationId:Int!, $characterId:Int!, $multiEpiIds:[Int!]!){\n  location(locationId:$locationId){\n    name\n    type\n    dimension\n    created\n  }\n  character(characterId:$characterId){\n    name\n    type\n    status\n    species\n  }\n  episodesByIds(ids:$multiEpiIds){\n    name\n    air_date\n    episode\n  }\n}",
+    "variables": {
+        "locationId": 7141,
+        "characterId": 6272,
+        "multiEpiIds": [
+            5135,
+            4000,
+            5000
+        ]
+    }
+}
+HTTP/1.1 200 OK
+Date: Tue, 27 Feb 2024 07:27:36 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Resource-Policy: same-origin
+X-DNS-Prefetch-Control: off
+Expect-CT: max-age=0
+X-Frame-Options: SAMEORIGIN
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Origin-Agent-Cluster: ?1
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: no-referrer
+X-XSS-Protection: 0
+Content-Type: application/json; charset=utf-8
+Content-Length: 393
+ETag: W/"189-SGgA4BJJSKrVB9vXGYoxTrH9gJ0"
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+
+{
+    "data": {
+        "location": {
+            "name": "Pochinki",
+            "type": "CenterZone",
+            "dimension": "8x8",
+            "created": "2024-02-27T07:27:34.037Z"
+        },
+        "character": {
+            "name": "Asta",
+            "type": "Strong",
+            "status": "alive",
+            "species": "white boy"
+        },
+        "episodesByIds": [
+            {
+                "name": "GOTE4",
+                "air_date": "2001 june",
+                "episode": "E5"
+            },
+            {
+                "name": "Drag",
+                "air_date": "6883 june",
+                "episode": "test"
+            },
+            {
+                "name": "Pubg",
+                "air_date": "10/10/2023",
+                "episode": "Team got AWM"
+            }
+        ]
+    }
+}

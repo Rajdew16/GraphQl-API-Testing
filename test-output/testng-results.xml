@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-26T21:52:22 IST" name="Default suite" finished-at="2024-02-26T21:52:29 IST" duration-ms="7546">
+    <groups>
+    </groups>
+    <test started-at="2024-02-26T21:52:22 IST" name="Default test" finished-at="2024-02-26T21:52:29 IST" duration-ms="7546">
+      <class name="graph.tests.GrapghQlTests">
+        <test-method signature="mutation()[pri:0, instance:graph.tests.GrapghQlTests@71a8adcf]" started-at="2024-02-26T21:52:22 IST" name="mutation" finished-at="2024-02-26T21:52:29 IST" duration-ms="7042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mutation -->
+        <test-method signature="query()[pri:0, instance:graph.tests.GrapghQlTests@71a8adcf]" started-at="2024-02-26T21:52:29 IST" name="query" finished-at="2024-02-26T21:52:29 IST" depends-on-methods="graph.tests.GrapghQlTests.mutation" duration-ms="392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- query -->
+      </class> <!-- graph.tests.GrapghQlTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

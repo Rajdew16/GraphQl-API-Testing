@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-27T12:57:15 IST" name="Surefire suite" finished-at="2024-02-27T12:57:22 IST" duration-ms="7475">
+    <groups>
+    </groups>
+    <test started-at="2024-02-27T12:57:15 IST" name="Surefire test" finished-at="2024-02-27T12:57:22 IST" duration-ms="7475">
+      <class name="graph.tests.GrapghQlTest">
+        <test-method signature="mutation()[pri:0, instance:graph.tests.GrapghQlTest@2de23121]" started-at="2024-02-27T12:57:15 IST" name="mutation" finished-at="2024-02-27T12:57:22 IST" duration-ms="6952" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mutation -->
+        <test-method signature="query()[pri:0, instance:graph.tests.GrapghQlTest@2de23121]" started-at="2024-02-27T12:57:22 IST" name="query" finished-at="2024-02-27T12:57:22 IST" depends-on-methods="graph.tests.GrapghQlTest.mutation" duration-ms="397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- query -->
+      </class> <!-- graph.tests.GrapghQlTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
